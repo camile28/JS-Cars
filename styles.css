@@ -1,0 +1,25 @@
+
+
+#car-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid rgb(220, 215, 215);
+    width: fit-content;
+   
+  
+
+}
+
+html { 
+    background: url(car.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 85%;
+  }
+  .car-image{
+    width: 300px;
+    height: 180px;
+  }
