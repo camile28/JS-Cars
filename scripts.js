@@ -3,7 +3,7 @@
 //atvaizduojamas po forma (CSS rašykite CSS'e) Paspaudus ant automobilio nuotraukos- turi alert išmesti kainą.
 
 //1. Susikurti HTML formą su reikalingais input laukeliais, kurioje vartotojas galės įrašyti (į input laukelius): car brand, model,
-//mileage, price ir image (url laukelis). 
+//mileage, price ir image (url laukelis).
 
 //2. Susikurti klasę Car
 
@@ -36,20 +36,22 @@ class Car {
     container.appendChild(card);
   }
 }
-document.getElementById("car-form").addEventListener("submit", function(event) {
-  event.preventDefault();
-  var car = new Car(
-    document.getElementById("brand").value,
-    document.getElementById("model").value,
-    document.getElementById("mileage").value,
-    document.getElementById("price").value,
-    document.getElementById("image").value
-  );
-  car.addToHTML();
-});
-document.addEventListener("click", function(event) {
+document
+  .getElementById("car-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    var car = new Car(
+      document.getElementById("brand").value,
+      document.getElementById("model").value,
+      document.getElementById("mileage").value,
+      document.getElementById("price").value,
+      document.getElementById("image").value
+    );
+    car.addToHTML();
+  });
+document.addEventListener("click", function (event) {
   if (event.target.className === "car-image") {
-    alert(event.target.parentNode.querySelector('p:last-child').innerHTML);
+    alert(event.target.parentNode.querySelector("p:last-child").innerHTML);
   }
 });
 
